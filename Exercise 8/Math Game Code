@@ -1,0 +1,77 @@
+function setup() {
+	//Setting up screen size of game 
+  createCanvas(600, 600);
+		
+	//Creating text for math game and where the text will be shown on the screen 
+  textAlign(CENTER, CENTER);
+  textSize(80);
+  fill(0);
+noStroke();
+  background(255);
+	fill(0);
+	textSize(53);
+	text("Click to play!", 280, 150);
+	fill(255,200,200);
+	stroke(0);
+	rect (140, 204, 277, 70); 
+	fill(0);
+	noStroke();
+	textSize(26);
+	text("Start", 280, 240);
+	fill(44, 37, 88);
+	textSize(18);
+	text("An addition question will appear on the screen.", 194, 450); 
+	text("Select the answer that corresponds with the math question", 238, 472);
+	
+}
+
+function mouseClicked() {
+  background(255);
+	fill(22, 38, 84);
+  var num1 = int(random(1, 100));
+  var num2 = int(random(1, 100));
+  var output = num1 + " + " + num2 + " = ";
+	var input =  + (num1 + num2)
+
+	
+	//Numbers in the rectangles 
+	//Rectangle #1 
+		textSize(50);
+  text(output, width / 2, height / 2);
+	stroke(0);
+	fill(255);
+	rect(0, 352, 140, 80);
+	fill(22);
+	text(10);
+	textSize(50);
+	text (input, 90, 390);
+	
+	//Rectangle #2 
+	fill(255);
+		rect(150, 352, 140, 80);
+	
+	textSize(50);
+	fill(0);
+	noStroke();
+	text(int(random(1,100)),235, 390);
+	
+	//Rectangle #3 
+	stroke(0);
+		fill(255);
+		rect(300, 352, 140, 80);
+	
+		noStroke();
+		textSize(50);
+	fill(0);
+	text(int(random(1,100)),380, 390);
+	
+	//Rectange #4 
+	stroke(0);
+		fill(255);
+		rect(450, 352, 140, 80);
+		noStroke();
+	textSize(50);
+	fill(0);
+	text(int(random(1,100)),500, 390);
+	
+  }
